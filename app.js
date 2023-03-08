@@ -41,5 +41,5 @@ function changeColor(choice) {
 function resetBoard() {
   let grid = document.querySelector("#etch-grid");
   let squares = grid.querySelectorAll("div");
-  squares.forEach((div) => div.remove());
+  squares.forEach((div) => (div.style.backgroundColor = "white"));
 }
