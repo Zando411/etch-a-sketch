@@ -27,9 +27,19 @@ function changeSize(input) {
 }
 
 function colorSquare() {
-  this.style.backgroundColor = color;
+  if (color === "random") {
+    this.style.backgroundColor = `hsl(${Math.random() * 360}, 100%, 50%)`;
+  } else {
+    this.style.backgroundColor = color;
+  }
 }
 
 function changeColor(choice) {
   color = choice;
+}
+
+function resetBoard() {
+  let grid = document.querySelector("#etch-grid");
+  let squares = grid.querySelectorAll("div");
+  squares.forEach((div) => div.remove());
 }
