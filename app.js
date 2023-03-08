@@ -1,3 +1,5 @@
+let color = "black";
+
 function populateGrid(size) {
   let grid = document.querySelector("#etch-grid");
   let squares = grid.querySelectorAll("div");
@@ -25,5 +27,9 @@ function changeSize(input) {
 }
 
 function colorSquare() {
-  this.style.backgroundColor = "black";
+  this.style.backgroundColor = color;
+}
+
+function changeColor(choice) {
+  color = choice;
 }

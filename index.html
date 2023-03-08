@@ -16,8 +16,18 @@
         <div id="etch-grid"></div>
       </div>
       <div>
-        <input type="text" placeholder="Size of Board" value="16" />
+        <input
+          type="text"
+          placeholder="Size of Board"
+          value="16"
+          onchange="changeSize(this.value)"
+        />
         <button>Set Size</button>
+        <button>Reset</button>
+        <button onclick="changeColor('black')">Black</button>
+        <button onclick="changeColor('white')">Eraser</button>
+        <button onclick="changeColor('gray')">gray</button>
+        <button>Random</button>
       </div>
     </main>
   </body>
